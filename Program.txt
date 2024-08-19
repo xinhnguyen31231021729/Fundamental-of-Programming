@@ -1,0 +1,33 @@
+﻿internal class Program
+{
+    static void Main(string[] args)
+    {
+        //baitap_01();
+        baitap_02();
+
+
+    }
+
+    static void baitap_01()
+    {
+    Console.Write("Temperature in Celsius(°C): ");
+        float Celsius = Convert.ToSingle(Console.ReadLine());
+    float Kelvin = Celsius + 273;
+    float Farenheit = Celsius * 18 / 10 + 32;
+    Console.WriteLine("{0} in C = {1} in Kelvin(°K) ", Celsius, Kelvin);
+        Console.WriteLine("{0} in C = {1} in Farenheit (°F)", Celsius, Farenheit);
+    }
+
+
+    static void baitap_02()
+    {
+        Console.WriteLine("Enter the radius of the sphere: ");
+        float r = Convert.ToSingle(Console.ReadLine());
+        double pi = Math.PI;
+        double surface = 4 * Math.PI * Math.Pow(r, 2);
+        double volume = 4 / 3 * Math.PI * Math.Pow(r,3);
+        Console.WriteLine("Surface of the sphere is: {0}", surface);
+        Console.WriteLine("Volume of the sphere is: {0}", volume);
+
+    }
+}
