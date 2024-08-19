@@ -1,0 +1,127 @@
+﻿using System;
+using System.Threading.Channels;
+
+internal class Program
+{
+    public static void Main(string[] args)
+    {
+
+        //baitap_01();
+        //baitap_02();
+        //baitap_03();
+        //baitap_04();
+        //baitap_05();
+        //baitap_06();
+        //baitap_07();
+        //baitap_08();
+        //baitap_09();
+        //baitap_10();
+    }
+
+
+
+    static void baitap_01()
+    {
+        Console.WriteLine("Enter 2 numbers to sum:");
+        Console.Write("a = ");
+        string a_str = Console.ReadLine();
+        int a = Convert.ToInt32(a_str);
+        Console.Write("b = ");
+        string b_str = Console.ReadLine();
+        int b = Convert.ToInt32(b_str);
+        Console.WriteLine($"{a} + {b} = {a + b}");
+    }
+    
+
+
+    static void baitap_02()
+    {
+        int a = 3, b = 7;
+        Console.WriteLine($"before swap a = {a}, b = {b}");
+        int temp = a;
+        a = b;
+        b = temp;
+        Console.WriteLine($"after swap a = {a}, b = {b}");
+    }
+
+
+
+    static void baitap_03()
+    {
+        Console.WriteLine("Enter two floating point numbers");
+        string num_string = Console.ReadLine();
+        double num = Convert.ToDouble(num_string);
+        double taxi = num * 100;
+        Console.WriteLine($"The answer is {taxi}");
+    }
+
+
+
+    static void baitap_04()
+    {
+        double feet, meter;
+        Console.WriteLine("Input Feet :");
+        feet = Convert.ToDouble(Console.ReadLine());
+        meter = feet / 3.2808399;
+        Console.WriteLine("\n feet in meter =" + meter);
+    }
+
+
+
+    static void baitap_05()
+    {
+        int celsius, faren;
+        Console.WriteLine("Enter the Temperature in Celsius(°C) : ");
+        celsius = int.Parse(Console.ReadLine());
+        faren = (celsius * 9) / 5 + 32;
+        Console.Write($"{celsius} °C = " + faren); Console.Write(" °F");
+        Console.ReadLine();
+    }
+
+
+
+
+    static void baitap_06()
+    {
+        Console.WriteLine("sizeof(int): {0}", sizeof(int));       
+        Console.WriteLine("sizeof(float): {0}", sizeof(float));
+        Console.WriteLine("sizeof(byte): {0}", sizeof(byte));
+        Console.WriteLine("sizeof(char): {0}", sizeof(char));     
+        Console.WriteLine("sizeof(double): {0}", sizeof(double)); 
+        Console.WriteLine("sizeof(bool): {0}", sizeof(bool));
+        Console.WriteLine("sizeof(ushort): {0}", sizeof(ushort));
+    }
+
+
+
+    static void baitap_08()
+    {
+        Console.Write("Ban kinh hình tron: "); 
+        double rad = Convert.ToDouble(Console.ReadLine());
+        double area = Math.PI * rad * rad;
+        Console.WriteLine("S tron = " + area);
+    }
+
+
+
+    static void baitap_09()
+    {
+        Console.Write("Canh hinh vuong: ");
+        double side = Convert.ToDouble(Console.ReadLine());
+        double area = side*side;
+        Console.WriteLine("S hinh vuong = " + area);
+    }
+
+
+
+    static void baitap_10()
+    {
+        Console.WriteLine("Enter the number of days: ");
+        string numDays_str = Console.ReadLine();
+        double numDays = Convert.ToInt32(numDays_str);
+        double years = Math.Floor(numDays / 365);
+        double weeks = Math.Floor((numDays - years * 365) / 7);
+        double days = numDays - (years * 365 + weeks * 7);
+        Console.WriteLine($"{numDays} days = {years} year(s) {weeks} week(s) {days} day(s)");
+    }
+}
